@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "QrCodeTransfer", "QrCodeTransfer\QrCodeTransfer.jsproj", "{156E5C38-6EA5-4D3C-8BBE-91037256CA3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{4361FC18-6C75-4BED-AFFA-7061CFFC0A27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QrCodeTransfer.Web", "WebApplication1\QrCodeTransfer.Web.csproj", "{4361FC18-6C75-4BED-AFFA-7061CFFC0A27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
