@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,8 +44,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Index.html" />
+    <Content Include="Content\bootstrap-fileinput\css\fileinput-rtl.css" />
+    <Content Include="Content\bootstrap-fileinput\css\fileinput-rtl.min.css" />
+    <Content Include="Content\bootstrap-fileinput\css\fileinput.css" />
+    <Content Include="Content\bootstrap-fileinput\css\fileinput.min.css" />
+    <Content Include="Content\bootstrap-fileinput\img\loading-sm.gif" />
+    <Content Include="Content\bootstrap-fileinput\img\loading.gif" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fa\theme.css" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fa\theme.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fa\theme.min.css" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer-fa\theme.min.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer\theme.css" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer\theme.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer\theme.min.css" />
+    <Content Include="Content\bootstrap-fileinput\themes\explorer\theme.min.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\fa\theme.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\fa\theme.min.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\gly\theme.js" />
+    <Content Include="Content\bootstrap-fileinput\themes\gly\theme.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="index.html" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\publish.pubxml" />
+    <Content Include="Scripts\fileinput.min.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -53,19 +78,58 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Index.js" />
+    <Content Include="index.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
-    <Content Include="Scripts\jquery.qrcode.js" />
     <Content Include="Scripts\jquery.qrcode.min.js" />
+    <Content Include="Scripts\locales\ar.js" />
+    <Content Include="Scripts\locales\az.js" />
+    <Content Include="Scripts\locales\bg.js" />
+    <Content Include="Scripts\locales\ca.js" />
+    <Content Include="Scripts\locales\cr.js" />
+    <Content Include="Scripts\locales\cs.js" />
+    <Content Include="Scripts\locales\da.js" />
+    <Content Include="Scripts\locales\de.js" />
+    <Content Include="Scripts\locales\el.js" />
+    <Content Include="Scripts\locales\es.js" />
+    <Content Include="Scripts\locales\et.js" />
+    <Content Include="Scripts\locales\fa.js" />
+    <Content Include="Scripts\locales\fi.js" />
+    <Content Include="Scripts\locales\fr.js" />
+    <Content Include="Scripts\locales\gl.js" />
+    <Content Include="Scripts\locales\hu.js" />
+    <Content Include="Scripts\locales\id.js" />
+    <Content Include="Scripts\locales\it.js" />
+    <Content Include="Scripts\locales\ja.js" />
+    <Content Include="Scripts\locales\ka.js" />
+    <Content Include="Scripts\locales\kr.js" />
+    <Content Include="Scripts\locales\kz.js" />
+    <Content Include="Scripts\locales\LANG.js" />
+    <Content Include="Scripts\locales\lt.js" />
+    <Content Include="Scripts\locales\nl.js" />
+    <Content Include="Scripts\locales\no.js" />
+    <Content Include="Scripts\locales\pl.js" />
+    <Content Include="Scripts\locales\pt-BR.js" />
+    <Content Include="Scripts\locales\pt.js" />
+    <Content Include="Scripts\locales\ro.js" />
+    <Content Include="Scripts\locales\ru.js" />
+    <Content Include="Scripts\locales\sk.js" />
+    <Content Include="Scripts\locales\sl.js" />
+    <Content Include="Scripts\locales\sv.js" />
+    <Content Include="Scripts\locales\th.js" />
+    <Content Include="Scripts\locales\tr.js" />
+    <Content Include="Scripts\locales\uk.js" />
+    <Content Include="Scripts\locales\vi.js" />
+    <Content Include="Scripts\locales\zh-TW.js" />
+    <Content Include="Scripts\locales\zh.js" />
+    <Content Include="Scripts\plugins\piexif.js" />
+    <Content Include="Scripts\plugins\piexif.min.js" />
+    <Content Include="Scripts\plugins\purify.js" />
+    <Content Include="Scripts\plugins\purify.min.js" />
+    <Content Include="Scripts\plugins\sortable.js" />
+    <Content Include="Scripts\plugins\sortable.min.js" />
     <Content Include="Scripts\qrcode.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>

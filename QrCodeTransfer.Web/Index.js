@@ -14,6 +14,11 @@
             alert("Error - The file API isn't supported on this browser yet.");
             return;
         }
+        $("#fileinput").fileinput({
+            showPreview: false,
+            showRemove: false,
+            showUpload: false
+        });
     };
 
     that.loadFile = function () {
