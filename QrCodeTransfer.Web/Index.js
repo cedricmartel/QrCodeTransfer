@@ -70,6 +70,9 @@
     }
 
     that.setCurrentQrCode = function (i) {
+        i = parseInt(i);
+        if (!i)
+            alert("Incorrect QR code number: " + i);
         currentQrCode = i;
         $("#lblQrCodeNumber").html(currentQrCode + "/" + totalNumberOfQrCodes);
         var data;
@@ -86,15 +89,37 @@
                 height: 600,
                 text: data
             });
+        $("#goToCode").val(i);
     };
 
     that.generateQrCode = function (content) {
         $("#qrcode").html("");
         $("#qrcode").qrcode(content);
-        $("#qrCodeContent").html("length=" + content.text.length + " value=\"" +
-            (content.text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')) + "\"");
+        $("#qrCodeContent").html("length = " + content.text.length + " bytes");
+         //"value=\"" + (content.text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')) + "\"");
     }
 
+    that.autoDuration = null;
+    that.autoStart = function () {
+        that.autoDuration = parseInt($("#codeDisplayDuration").val());
+        if(!that.autoDuration)
+        {
+            alert("incorrect duration: " + $("#codeDisplayDuration").val());
+            return;
+        }
+        setTimeout(that.autoTicker, that.autoDuration);
+    };
+
+    that.autoTicker = function () {
+        if (!that.autoDuration)
+            return;
+        that.incrementQrCode(1);
+        setTimeout(that.autoTicker, that.autoDuration);
+    };
+
+    that.autoStop = function () {
+        that.autoDuration = null;
+    };
 };
 
 $(qctController.init);

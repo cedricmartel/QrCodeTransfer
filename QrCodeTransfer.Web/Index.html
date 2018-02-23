@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Qr Code Transfer</title>
+
+    <!--jquery-->
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/qrcode.min.js"></script>
+    <script src="Scripts/jquery.qrcode.min.js"></script>
+
+    <!--bootstrap-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <!--code-->
+    <script src="Index.js"></script>
+
+    <style>
+        input[type=text]{
+            width: 3.5em;
+        }
+    </style>
+</head>
+<body>
+    <!--start page content-->
+    <div id="PageContent">
+        <h2>
+            Qr-Code File Transfer tool
+        </h2>
+        <form action="#" onsubmit="return false;">
+            <div style="margin: 1em;">
+                Please select file to convert to QR Code, for transfer to phone
+                - bytes per code:
+                <input type="text" value="1100" id="bytesPerCode" />
+
+                <input type="file" id="fileinput" />
+                <input type="button" id="btnLoad" value="Load file" onclick="qctController.loadFile()" class="btn btn-success" />
+
+            </div>
+        </form>
+
+        <div style="margin-left: 50px;">
+            <div>
+                <button type="button" class="btn btn-default" onclick="qctController.incrementQrCode(-1)">Prev</button>
+                <span id="lblQrCodeNumber"></span>
+                <button type="button" class="btn btn-default" onclick="qctController.incrementQrCode(1)">Next</button>
+                go to specific code <input type="text" value="" id="goToCode" /><button type="button" class="btn btn-default" onclick="qctController.setCurrentQrCode($('#goToCode').val())">Go</button>
+            </div>
+            <div>
+                Automatic code generation
+                <button type="button" class="btn btn-default" onclick="qctController.autoStart()">Start</button>
+                each code will be visible <input type="text" value="4000" id="codeDisplayDuration" /> ms 
+                <button type="button" class="btn btn-default" onclick="qctController.autoStop()">Stop</button>
+            </div>
+            <div id="qrcode" style=""></div>
+            <div id="qrCodeContent"></div>
+
+        </div>
+    </div>
+    <!--end page content-->
+</body>
+</html>
